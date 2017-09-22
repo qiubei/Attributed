@@ -36,7 +36,7 @@ public struct Attributes {
         self = attributesBlock(Attributes())
     }
 
-    internal init(dictionary: [NSAttributedStringKey: Any]) {
+    public init(dictionary: [NSAttributedStringKey: Any]) {
         self.dictionary = dictionary
     }
 
