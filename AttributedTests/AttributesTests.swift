@@ -26,7 +26,7 @@ import XCTest
 
 class AttributesTests: XCTestCase {
     func testFont() {
-        let expected: [String: Any] = [NSAttributedStringKey.font.rawValue: UIFont.systemFont(ofSize: 12.0)]
+        let expected: [String: Any] = [NSAttributedString.Key.font.rawValue: UIFont.systemFont(ofSize: 12.0)]
         let attributed = Attributes().font(.systemFont(ofSize: 12.0))
         XCTAssert(attributed.dictionary.keys.first!.rawValue == expected.keys.first!, "Font is broken")
     }
@@ -34,7 +34,7 @@ class AttributesTests: XCTestCase {
     // NSBaselineOffsetAttributeName
 
     func testBaselineOffset() {
-        let expected: [String: Any] = [NSAttributedStringKey.baselineOffset.rawValue: NSNumber(value: 1)]
+        let expected: [String: Any] = [NSAttributedString.Key.baselineOffset.rawValue: NSNumber(value: 1)]
         let attributed = Attributes().baselineOffset(1)
         XCTAssert(attributed.dictionary.keys.first!.rawValue == expected.keys.first!, "NSBaselineOffsetAttributeName functionality is broken")
     }
